@@ -1,9 +1,21 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Badge colors / links for the `abbr` field of entries in _bibliography/papers.bib.
+"JMPS":
+  url: https://www.sciencedirect.com/journal/journal-of-the-mechanics-and-physics-of-solids
+  color: "#00274c"
+"Acta Biomater.":
+  url: https://www.sciencedirect.com/journal/acta-biomaterialia
+  color: "#00274c"
+"EML":
+  url: https://www.sciencedirect.com/journal/extreme-mechanics-letters
+  color: "#00274c"
+"Front. Bioeng.":
+  url: https://www.frontiersin.org/journals/bioengineering-and-biotechnology
+  color: "#00274c"
+"Tissue Eng. A":
+  url: https://www.liebertpub.com/loi/tea
+  color: "#00274c"
+"Proc. R. Soc. B":
+  url: https://royalsocietypublishing.org/journal/rspb
+  color: "#00274c"
+"EECS":
+  color: "#00274c"

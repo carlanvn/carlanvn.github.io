@@ -1,0 +1,37 @@
+---
+---
+{%- comment -%}
+  Plain publication entry: Authors (Year). Title. Venue, volume(number), pages.
+  The title links to the paper (DOI if present, otherwise url). Used via `scholar.bibliography_template` in _config.yml.
+{%- endcomment -%}
+{%- assign link = entry.url -%}
+{%- if entry.doi -%}
+  {%- assign link = entry.doi | prepend: 'https://doi.org/' -%}
+{%- endif -%}
+<div class="publication-plain mb-3" id="{{ entry.key }}">
+  {%- for author in entry.author_array -%}
+    {%- assign is_self = false -%}
+    {%- if site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
+      {%- assign is_self = true -%}
+    {%- endif -%}
+    {%- unless forloop.first -%}
+      {%- if forloop.last %}, &amp; {% else %}, {% endif -%}
+    {%- endunless -%}
+    {%- if is_self -%}
+      <strong>{{ author.last }}, {{ author.first }}</strong>
+    {%- else -%}
+      {{ author.last }}, {{ author.first }}
+    {%- endif -%}
+  {%- endfor %}
+  ({{ entry.year }}).
+  {% if link -%}
+    <a href="{{ link }}">{{ entry.title }}</a>.
+  {%- else -%}
+    {{ entry.title }}.
+  {%- endif %}
+  <em>{{ entry.journal | default: entry.booktitle }}</em>
+  {%- if entry.volume %}, {{ entry.volume }}{% endif -%}
+  {%- if entry.number %}({{ entry.number }}){% endif -%}
+  {%- if entry.pages %}, {{ entry.pages }}{% endif -%}
+  .
+</div>
