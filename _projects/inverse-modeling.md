@@ -4,7 +4,7 @@ title: Computational modeling
 # description: Inferring material behavior and mechanics from rich experimental data.
 img: assets/img/research/inverseModeling.png
 importance: 2
-related_publications: true
+related_publications: false
 ---
 
 <a href="{{ '/research/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Back to research</a>

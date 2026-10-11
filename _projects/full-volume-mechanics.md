@@ -4,7 +4,7 @@ title: Full volume mechanics
 # description:
 img: assets/img/research/fullVolTendon.svg
 importance: 1
-related_publications: true
+related_publications: false
 ---
 
 <a href="{{ '/research/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Back to research</a>
